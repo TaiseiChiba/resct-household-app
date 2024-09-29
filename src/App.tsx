@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Report from './pages/Report';
 import NoMatch from './pages/NoMatch';
-import AppLayout from './components/AppLayout';
+import AppLayout from './components/layouts/AppLayout';
 
 function App() {
   return (
