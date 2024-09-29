@@ -6,6 +6,17 @@ import MailIcon from '@mui/icons-material/Mail';
 
 import React from 'react'
 
+/**
+ * サイドバープロップス
+ * サイドバーの型をまとめたインターフェイス
+ */
+interface SideBarProps {
+  drawerWidth:number, 
+  mobileOpen: boolean, 
+  handleDrawerTransitionEnd: () => void, 
+  handleDrawerClose: () => void
+}
+
 const drawer = (
   <div>
     <Toolbar />
@@ -39,7 +50,7 @@ const drawer = (
 );
 
 
-const SideBar = ({drawerWidth, mobileOpen, handleDrawerTransitionEnd, handleDrawerClose}: {drawerWidth:number, mobileOpen: boolean, handleDrawerTransitionEnd: () => void, handleDrawerClose: () => void}) => {
+const SideBar = ({drawerWidth, mobileOpen, handleDrawerTransitionEnd, handleDrawerClose}: SideBarProps) => {
   return (
     <Box
         component="nav"
